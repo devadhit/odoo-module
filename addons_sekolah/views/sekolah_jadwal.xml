@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="view_list_sekolah_jadwal">
+      <field name="name">Jadwal</field>
+      <field name="model">addons_sekolah.jadwal</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="hari"/>
+          <field name="jam" widget="float_time"/>
+          <field name="kelas_id"/>
+          <field name="mapel_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_form_sekolah_jadwal" model="ir.ui.view">
+      <field name="name">Jadwal</field>
+      <field name="model">addons_sekolah.jadwal</field>
+      <field name="arch" type="xml">
+        <form string="Jadwal">
+          <sheet>
+            <group>
+                <field name="hari"/>
+                <field name="jam" widget="float_time"/>
+                <field name="kelas_id"/>
+                <field name="mapel_id"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record  id="addons_sekolah_jadwal_action_window" model="ir.actions.act_window">
+      <field name="name">Jadwal</field>
+      <field name="res_model">addons_sekolah.jadwal</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>

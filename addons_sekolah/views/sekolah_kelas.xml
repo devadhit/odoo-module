@@ -1,0 +1,41 @@
+<odoo>
+  <data>
+
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="view_list_sekolah_kelas">
+      <field name="name">Kelas</field>
+      <field name="model">addons_sekolah.kelas</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nm_kelas"/>
+          <field name="siswa_ids"/>
+          <field name="wali_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_form_sekolah_kelas" model="ir.ui.view">
+      <field name="name">Guru</field>
+      <field name="model">addons_sekolah.kelas</field>
+      <field name="arch" type="xml">
+        <form string="Guru">
+          <sheet>
+            <group>
+                <field name="nm_kelas"/>
+                <field name="siswa_ids"/>
+                <field name="wali_id"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record  id="addons_sekolah_kelas_action_window" model="ir.actions.act_window">
+      <field name="name">Kelas</field>
+      <field name="res_model">addons_sekolah.kelas</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>

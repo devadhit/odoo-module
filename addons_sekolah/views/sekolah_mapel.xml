@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="view_list_sekolah_mapel">
+      <field name="name">Mata Pelajaran</field>
+      <field name="model">addons_sekolah.matapelajaran</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nm_matapelajaran"/>
+          <field name="jurusan"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_form_sekolah_mapel" model="ir.ui.view">
+      <field name="name">Mata Pelajaran</field>
+      <field name="model">addons_sekolah.matapelajaran</field>
+      <field name="arch" type="xml">
+        <form string="Mata Pelajaran">
+          <sheet>
+            <group>
+              <group>
+                <field name="nm_matapelajaran"/>
+              </group>
+              <group>
+                <field name="jurusan"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record id="addons_sekolah_mapel_action_window" model="ir.actions.act_window">
+      <field name="name">Mata Pelajaran</field>
+      <field name="res_model">addons_sekolah.matapelajaran</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>

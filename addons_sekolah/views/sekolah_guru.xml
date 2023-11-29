@@ -1,0 +1,53 @@
+<odoo>
+  <data>
+
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="view_list_sekolah_guru">
+      <field name="name">Guru</field>
+      <field name="model">addons_sekolah.guru</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nip"/>
+          <field name="nm_guru"/>
+          <field name="jns_kelamin"/>
+          <field name="usia"/>
+          <field name="no_telp"/>
+          <field name="alamat"/>
+          <field name="mapel_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_form_sekolah_guru" model="ir.ui.view">
+      <field name="name">Guru</field>
+      <field name="model">addons_sekolah.guru</field>
+      <field name="arch" type="xml">
+        <form string="Guru">
+          <sheet>
+            <group>
+              <group>
+                <field name="nip"/>
+                <field name="nm_guru"/>
+                <field name="jns_kelamin"/>
+                <field name="usia"/>
+              </group>
+              <group>
+                <field name="no_telp"/>
+                <field name="alamat"/>
+                <field name="mapel_id"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record  id="addons_sekolah_guru_action_window" model="ir.actions.act_window">
+      <field name="name">Guru</field>
+      <field name="res_model">addons_sekolah.guru</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>

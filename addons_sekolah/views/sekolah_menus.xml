@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <menuitem 
+            name="Sekolah" 
+            id="menu_sekolah_root"/>
+
+        <!-- menu categories -->
+        <menuitem 
+            action="addons_sekolah_siswa_action_window"
+            name="Siswa" 
+            id="menu_addons_sekolah_sekolah" 
+            parent="addons_sekolah.menu_sekolah_root"
+            sequence="4"
+            />
+
+        <menuitem 
+            action="addons_sekolah_mapel_action_window"
+            name="Mata Pelajaran" 
+            id="menu_addons_sekolah_mapel" 
+            parent="addons_sekolah.menu_sekolah_root"
+            sequence="5"
+            />
+
+        <menuitem 
+            action="addons_sekolah_guru_action_window"
+            name="Guru" 
+            id="menu_addons_sekolah_guru" 
+            parent="addons_sekolah.menu_sekolah_root"
+            sequence="6"
+            />
+
+        <menuitem 
+            action="addons_sekolah_kelas_action_window"
+            name="Kelas" 
+            id="menu_addons_sekolah_kelas" 
+            parent="addons_sekolah.menu_sekolah_root"
+            sequence="6"
+            />
+
+        <menuitem 
+            action="addons_sekolah_jadwal_action_window"
+            name="Jadwal" 
+            id="menu_addons_sekolah_jadwal" 
+            parent="addons_sekolah.menu_sekolah_root"
+            sequence="7"
+            />
+
+    </data>
+</odoo>

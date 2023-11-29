@@ -1,0 +1,57 @@
+<odoo>
+  <data>
+
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="addons_sekolah.list">
+      <field name="name">Siswa</field>
+      <field name="model">addons_sekolah.siswa</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nis"/>
+          <field name="nm_siswa"/>
+          <field name="jns_kelamin"/>
+          <field name="tgl_lahir"/>
+          <field name="agama"/>
+          <field name="nm_ayah"/>
+          <field name="nm_ibu"/>
+          <field name="usia"/>
+          <field name="alamat"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="addons_sekolah.form" model="ir.ui.view">
+      <field name="name">Siswa</field>
+      <field name="model">addons_sekolah.siswa</field>
+      <field name="arch" type="xml">
+        <form string="Siswa">
+          <sheet>
+            <group>
+              <group>
+                <field name="nis"/>
+                <field name="nm_siswa"/>
+                <field name="jns_kelamin"/>
+                <field name="tgl_lahir"/>
+                <field name="usia"/>
+              </group>
+              <group>
+                <field name="agama"/>
+                <field name="nm_ayah"/>
+                <field name="nm_ibu"/>
+                <field name="alamat"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record id="addons_sekolah_siswa_action_window" model="ir.actions.act_window">
+      <field name="name">Siswa</field>
+      <field name="res_model">addons_sekolah.siswa</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>
